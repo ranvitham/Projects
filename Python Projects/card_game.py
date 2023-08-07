@@ -1,6 +1,8 @@
 """
 
 """
+import numpy as np
+import random
 
 class Card:
     #A Card object maintains a `rank` and a `suit`
@@ -75,3 +77,52 @@ class Card:
         else:
             return False
         pass
+
+
+
+class Deck:
+    shuffled = False 
+    dealt=0
+    deck=[]
+    suits = ['C', 'H', 'S', 'D']
+    ranks = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    
+    def __init__(self, shuffled=False):
+        self.shuffled = self.shuffled
+        
+        for x in self.suits:
+            for y in self.ranks:
+                self.deck.append(Card(y, x))
+                if shuffled == True:
+                    self.shuffle()
+                    
+            self.cards = self.deck
+
+            
+    def shuffle(self):
+        self.shuffled = True
+        random.shuffle(self.deck)
+        
+    def deal_card(self):
+        if self.dealt < 52:
+            self.dealt += 1
+            
+        else:
+            return None
+        return self.cards.pop(0)
+    
+        
+    def __repr__(self):
+        return "Deck("+"dealt "+ str(self.dealt) + ", " +"shuffled=" + str(self.shuffled)+")"
+        
+        
+    def reset(self):
+        self.deck.clear()
+        self.dealt = 0
+        self.shuffled = self.shuffled
+        
+        for x in self.suits:
+            for y in self.ranks:
+                self.deck.append(Card(y, x))
+            self.cards = self.deck
+            
