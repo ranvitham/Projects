@@ -1,5 +1,8 @@
 """
-
+This a card game using object oriented programming to create two different classes, a 'Card' and 'Deck' class. The
+'Card' class assigns a card object a rank and suit. The class can also print out the information of the card
+and compare two card object to find which one is better. The 'Deck' class uses card objects from the Card class to
+create the deck of cards. The 'Deck' class initializes 
 """
 import numpy as np
 import random
@@ -12,7 +15,6 @@ class Card:
 
     def __init__(self, rank: int, suit: str):
         #Initializes Card object.
-        
         assert 2 <= rank <= 14, #Valid ranks are [2, 14] for the ranks: [2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A]
         assert suit.upper() in {'C', 'H', 'S', 'D'}, #Valid suits are [C, H, S, D]
 
@@ -20,8 +22,7 @@ class Card:
         self.suit = suit
 
     def __repr__(self):
-        #Returns the string representation of this card.
-        
+        #Returns the string representation of a card.
         _suit_to_str = {'C': 'Clubs', 'H': 'Hearts', 'S': 'Spades', 'D': 'Diamonds'}
         _rank_to_str = {11: 'Jack', 12: 'Queen', 13: 'King', 14: 'Ace'}
         
@@ -35,7 +36,6 @@ class Card:
 
     def __lt__(self, other):
         #Determines whether the rank of this card is less than the rank of the other.
-        
         if self.rank < other.rank:
             return True
         else:
@@ -44,7 +44,6 @@ class Card:
 
     def __gt__(self, other):
         #Determines whether the rank of this card is greater than the rank of the other.
-        
         if self.rank > other.rank:
             return True
         else:
@@ -53,7 +52,6 @@ class Card:
 
     def __le__(self, other):
         #Determines whether the rank of this card is less than or equal to the rank of the other.
-        
         if self.rank <= other.rank:
             return True
         else:
@@ -62,7 +60,6 @@ class Card:
 
     def __ge__(self, other):
         #Determines whether the rank of this card is greater than or equal to the rank of the other.
-        
         if self.rank >= other.rank:
             return True
         else:
@@ -71,7 +68,6 @@ class Card:
 
     def __eq__(self, other):
         #Determines whether the rank of this card is equal to the rank of the other.
-        
         if self.rank == other.rank:
             return True
         else:
@@ -88,6 +84,7 @@ class Deck:
     ranks = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
     
     def __init__(self, shuffled=False):
+        #Initializes the Deck object.
         self.shuffled = self.shuffled
         
         for x in self.suits:
@@ -100,10 +97,12 @@ class Deck:
 
             
     def shuffle(self):
+        #Shuffles the deck.
         self.shuffled = True
         random.shuffle(self.deck)
         
     def deal_card(self):
+        #Deals the deck.
         if self.dealt < 52:
             self.dealt += 1
             
@@ -113,10 +112,12 @@ class Deck:
     
         
     def __repr__(self):
+        #Returns the string representation of a deck.
         return "Deck("+"dealt "+ str(self.dealt) + ", " +"shuffled=" + str(self.shuffled)+")"
         
         
     def reset(self):
+        #Resets the new Deck so there is no need to create new Deck object.
         self.deck.clear()
         self.dealt = 0
         self.shuffled = self.shuffled
