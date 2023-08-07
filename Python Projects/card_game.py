@@ -1,8 +1,17 @@
 """
-This a card game using object oriented programming to create two different classes, a 'Card' and 'Deck' class. The
-'Card' class assigns a card object a rank and suit. The class can also print out the information of the card
-and compare two card object to find which one is better. The 'Deck' class uses card objects from the Card class to
-create the deck of cards. The 'Deck' class initializes 
+This card game uses object-oriented programming to create two different classes, a 'Card' and a 'Deck' class.
+The 'Card' class:
+   - assigns a card object a rank and a suit
+   - print out the card information (repr function)
+   - compare two card objects to find which one is better. 
+The 'Deck' class uses card objects from the Card class to create the deck of cards. 
+The 'Deck' class: 
+   - initializes a deck object that takes in one constructor which indicates whether the deck object 
+     should be initialized in sorted order or shuffled which is an optional parameter sorted by default 
+   - initializes with a whole typical set of 52 cards for a deck object
+   - allows the deck object to be shuffled, dealt, and reset
+   - prints the number of cards that have been dealt, whether the deck has been shuffled, and that it 
+     is a deck object (repr function)
 """
 import numpy as np
 import random
