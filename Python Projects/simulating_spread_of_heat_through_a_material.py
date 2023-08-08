@@ -13,7 +13,7 @@ Numerically, this equation can be written out as:
 𝑢(𝑡)𝑖𝑗= (𝑢(𝑡−1)𝑖+1, 𝑗+𝑢(𝑡−1)𝑖−1, 𝑗+𝑢(𝑡−1)𝑖, 𝑗+1+𝑢(𝑡−1)𝑖, 𝑗−1) / 4
  
 That is, 𝑢(𝑡)𝑖𝑗 is the heat at grid location (𝑖,𝑗) at time-step 𝑡. Its value is given by the 
-average of the heat of all four of its neighboring grid positions from time-step  𝑡−1.
+average of the heat of all four of its neighboring grid positions from time-step 𝑡−1.
 """
 
 import numpy as np
