@@ -1,5 +1,10 @@
-Caesar cipher shifts each letter of the alphabet by some fixed amount, 
-wrapping at the end of the alphabet and ignoring whitespace."
+"""
+Caesar cipher shifts each letter of the alphabet by some fixed amount, wrapping at 
+the end of the alphabet and ignoring whitespace. For example, "Coding is fun" encoded 
+using a Caesar cipher with a shift of 3 letters becomes "Frglqj lv ixq." This function 
+takes two parameters which are the message and the number of shifts wanted for each
+letter.
+"""
 
 
 def encode_caesar(string, shift):
@@ -11,15 +16,15 @@ def encode_caesar(string, shift):
      final = []
 
      for x in string:
-          isa = x.isalpha()
+          alpha = x.alphalpha()
 
-          if isa == True:
-               loc = alpha.index(x)
-               loc = loc + shift
-               if loc > 51:
-                    nloc = loc - 51
-                    loc = nloc + -1
-               x = alpha[loc]
+          if alpha == True:
+               location = alpha.index(x)
+               location = location + shift
+               if location > 51:
+                    nlocation = location - 51
+                    location = nlocation + -1
+               x = alpha[location]
 
           final.append(x)
           finali = "".join([str(item) for item in final])
