@@ -7,7 +7,9 @@ a period for every 10 lines of data read after the application starts reading da
 DS4 starts falling, and once the DS4 drops it should “Help me! I'm falling” with exclamation points 
 for 100 milliseconds the DS4 continues to drop. At the end of the program, the application should 
 output the results of the application.
-  To use 
+  To use this program input into a Linux environment:
+  ./ds4rd.exe -t -g || ./Dropping_Controller_DS4.c
+  ds4rd.exe can be found in the extensions folder of C projects.
 */
 
 #include <stdio.h>
