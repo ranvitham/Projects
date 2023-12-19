@@ -1,9 +1,22 @@
 /*
-This is a simple speech synthesizer using a dual shock controller. This program takes an input of
-a word text file from the command file. To use this program input:
-./ds4rd.exe -d "NUMBER OF CONTROLLER" -D DS4_BT -t -b -j -bt || ./Speech_Synthesizer_DS4.c wordslist.txt
-ds4rd.exe and wordslist.txt can be found in the extensions folder.
+	This program is a simple speech synthesizer that uses a dual shock controller. This program 
+aims to help people with limited mobility create sentences to communicate. This program takes an 
+input of a word text file filename from the command file of the user's choosing (one is also available 
+in the extensions folder of C projects). On the screen, the options from the word text file are laid 
+into five columns with a cursor there to show what option is currently selected, and as the user types 
+a sentence using the buttons, it appears at the bottom of the screen.
+	The right joystick lets the user move the cursor however they would like to choose an option. 
+The square button adds the option the cursor is currently on to the sentence displayed at the bottom 
+of the page, and the triangle button does the same thing but adds a space before the option when added 
+to the sentence. The X button allows the user to undo their past moves as much as they want. Pressing 
+on the right joystick clears the sentence at the bottom.
 
+
+	To use this program input in a Linux environment:
+./ds4rd.exe -d "NUMBER OF CONTROLLER" -D DS4_BT -t -b -j -bt || ./Speech_Synthesizer_DS4.c wordslist.txt
+
+ds4rd.exe and wordslist.txt can be found in the extensions folder. The word text file contains the 
+whole alphabet, all the punctuations, and commonly used words.
 */
 
 #include <stdio.h>
