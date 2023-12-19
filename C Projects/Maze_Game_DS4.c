@@ -63,9 +63,7 @@ int main(int argc, char* argv[])
 	// Generate and draw the maze, with initial avatar
 	generate_maze(difficulty);
 	draw_maze();
-	draw_character(x, y, AVATAR);
-
-	// Read gyroscope data to get ready for using moving averages.    
+	draw_character(x, y, AVATAR);   
 
 	// Event loop
 	do
@@ -143,11 +141,8 @@ int main(int argc, char* argv[])
 		
        
 		
-		// Read data, update average
-		
-		// Is it time to move?  if so, then move avatar
 
-	} while(nY < NUMROWS - 1); // Change this to end game at right time 
+	} while(nY < NUMROWS - 1);
 
 	endwin();
 	// Print the win message
@@ -169,8 +164,6 @@ int main(int argc, char* argv[])
 // PRE: 0 < x < COLS, 0 < y < ROWS, 0 < use < 255
 // POST: Draws character use to the screen and position x,y
 //THIS CODE FUNCTIONS FOR PLACING THE AVATAR AS PROVIDED.
-//
-//    >>>>DO NOT CHANGE THIS FUNCTION.<<<<
 void draw_character(int x, int y, char use)
 {
 	mvaddch(y,x,use);    
@@ -180,9 +173,6 @@ void draw_character(int x, int y, char use)
 
 
 // POST: Generates a random maze structure into MAZE[][]
-//You will want to use the rand() function and maybe use the output %100.  
-//You will have to use the argument to the command line to determine how 
-//difficult the maze is (how many maze characters are on the screen).
 void generate_maze(int difficulty){
 	for (int i = 0; i < NUMROWS; i++){
 		for (int j = 0; j < NUMCOLS; j++){
@@ -212,7 +202,6 @@ int close_to(double tolerance, double point, double value){
 
 // PRE: -1.0 < x_mag < 1.0
 // POST: Returns tilt magnitude scaled to -1.0 -> 1.0
-// You may want to reuse the roll function written in previous labs.  
 float calc_roll(float x_mag){
 	return asin(x_mag);
 }
