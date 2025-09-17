@@ -16,12 +16,12 @@ and make it to the person in their room or cubicle and announce its presence wit
 test field in the context of our problem.)
 
 Key Functionalities:
+- Basic Platform Components and Modes: Open Interface and iRobot sensors, Interrupts, Analog to digital conversion, Input capture, Pulse width modulation, and UART/WiFi.
 - Pathfinding & Navigation: Maneuvering through the test field without hitting any objects or falling into “holes” using sensors and servo-mounted 
 scanning systems.
 - GUI Map: A visual representation of what the sensors are detecting so the user/driver can see what is there without being physically present.
 
 Key Technical Features:
-- iRobot Create platform.
 - IR and Ping sensors for detection.
 - 180-degree servo for scanning.
 - Integrated audio system for output of sound signal.
