@@ -1,6 +1,6 @@
-Final Project for CPRE 2880 (Spring 2025) - Embedded Systems at Iowa State University
+Final Project for CPRE 2880 (Spring 2025) - Embedded Systems at Iowa State University - A project truly built all the way from the ground up.
 
-Group Members: Ranvitha Muramreddy (me), Megan Chng, Wesley McGovern, Dylan Bunting, Carson Cornwell
+Group Members: Ranvitha Muramreddy (me), Megan Chng, Wesley McGovern, Dylan Bunting, Carson Cornwell.
 
 Problem Statement: Create an Accessible Drink Delivery System that can navigate through unpredictable environments 
 and deliver drinks to a person, announcing using a sound signal when it has arrived.
